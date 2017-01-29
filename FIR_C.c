@@ -21,32 +21,40 @@ int FIR_C(float* InputArray, float* OutputArray, struct FIR_coeff* coeff, int Le
 					OutputArray[output_array_pointer] = sum;
 				
 				case 1:
-					if(input_array_pointer - filter_coeff_pointer > 0) {
+					if(input_array_pointer - filter_coeff_pointer >= 0) {
 						sum += coeff->b1 * InputArray[input_array_pointer - filter_coeff_pointer];
 					}
 					else {
 						OutputArray[output_array_pointer] = sum;
+						output_array_pointer++;
+						break;
 					}	
 				case 2:
-					if(input_array_pointer - filter_coeff_pointer > 0) {
+					if(input_array_pointer - filter_coeff_pointer >= 0) {
 						sum += coeff->b2 * InputArray[input_array_pointer - filter_coeff_pointer];
 					}
 					else {
 						OutputArray[output_array_pointer] = sum;
+						output_array_pointer++;
+						break;
 					}
 				case 3:
-					if(input_array_pointer - filter_coeff_pointer > 0) {
+					if(input_array_pointer - filter_coeff_pointer >= 0) {
 						sum += coeff->b3 * InputArray[input_array_pointer - filter_coeff_pointer];
 					}
 					else {
 						OutputArray[output_array_pointer] = sum;
+						output_array_pointer++;
+						break;
 					}
 				case 4:
-					if(input_array_pointer - filter_coeff_pointer > 0) {
+					if(input_array_pointer - filter_coeff_pointer >= 0) {
 						sum += coeff->b4 * InputArray[input_array_pointer - filter_coeff_pointer];
 					}
 					else {
 						OutputArray[output_array_pointer] = sum;
+						output_array_pointer++;
+						break;
 					}
 			}
 		}
