@@ -1,0 +1,7 @@
+AREA fir, CODE, READONLY
+	EXPORT FIR_ASM
+	IMPORT test
+		
+FIR_ASM
+	
+END
