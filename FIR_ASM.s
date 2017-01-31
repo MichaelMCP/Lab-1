@@ -1,7 +1,9 @@
 AREA fir, CODE, READONLY
 	EXPORT FIR_ASM
-	IMPORT test
+	IMPORT test.h
 		
 FIR_ASM
-	
+	LDR R0, =test.h
+	LDR R1, [R0]
+
 END
