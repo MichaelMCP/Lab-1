@@ -1,10 +1,4 @@
-struct FIR_coeff {
-	int b0;
-	int b1;
-	int b2;
-	int b3;
-	int b4;   
-};
+#include "FIR_C.h"
 
 int FIR_C(float* InputArray, float* OutputArray, struct FIR_coeff* coeff, int Length, int Order) {
 	int input_array_pointer;
